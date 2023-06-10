@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typing Speed Calculator - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Calculator - Result</h1>
+        <h2>Test String:</h2>
+        <p>{{ test }}</p>
+        <div class="result">
+            <p>Speed: {{ speed }} WPM</p>
+            <p>Accuracy: {{ accuracy }}%</p>
+            <p>Errors: {{ errors }}</p>
+        </div>
+        <form action="/" method="post">
+            <input type="hidden" name="difficulty" value="{{ difficulty }}">
+            <input type="submit" value="Try Again">
+        </form>
+    </div>
+</body>
+</html>

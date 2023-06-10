@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typing Speed Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Calculator</h1>
+        <form action="/" method="post">
+            <label for="difficulty">Select Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                {% for level, texts in difficulty_levels.items() %}
+                <option value="{{ level }}">{{ level }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Start Typing Test">
+        </form>
+        {% if test %}
+        <form action="/play" method="post">
+            <input type="hidden" name="test" value="{{ test }}">
+            <input type="hidden" name="start_time" value="{{ start_time }}">
+            <div class="typing-container">
+                <p>Test String:</p>
+                <p>{{ test }}</p>
+                <label for="user_input">Type the text:</label><br>
+                <textarea id="user_input" name="user_input" rows="4" cols="50" placeholder="Type the text here"></textarea><br><br>
+                <input type="submit" value="Calculate Speed">
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>

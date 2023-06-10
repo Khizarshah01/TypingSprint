@@ -1,0 +1,19 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Flask-specific files
+.env
+venv/
+
+# Generated files and directories
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.sqlite3
