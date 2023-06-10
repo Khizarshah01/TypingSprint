@@ -20,7 +20,7 @@ This is a simple web application built with Flask that calculates typing speed a
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Khizarshah01/Typing-Practice_Project.git
     ```
 
 2. Install the dependencies:
